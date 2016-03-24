@@ -30,7 +30,7 @@ This file describes the format of the classification file exports from the Zooni
   - **user_language** - language used in the browser. Web abbreviations. 'en' = English subject_dimensions -tells you the pixel width and height on the classifier's screen and also what the original size of the image is
 
 Example:
-  ```JSON
+  ```
   {"session":"2ef7c75a506a885d82ce792bbb90f7eb4a5a5b45838645294504a01f08c8f394","viewport":{"width":1920,"height":1084},"started_at":"2016-03-08T16:52:16.424Z","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36","utc_offset":"0","finished_at":"2016-03-08T16:53:12.398Z","live_project":false,"user_language":"en","user_group_ids":[1383478,1383478,1383478,1383476],"subject_dimensions":[{"clientWidth":800,"clientHeight":600,"naturalWidth":800,"naturalHeight":600}]}
   ```
 
@@ -41,13 +41,11 @@ Example:
 gives you the task order, init =0, T1= 1st, TN=nth task. Value is the response, it will be an array if the answer is allowed multiple answers., task_label gives the text prompt the classifier received.
 
 Example
-  ```JSON
-  [{""task"":""init"",""value"":""No"",""task_label"":""Is the center region of the asteroid image (purple crosshairs)  crowded?""},{""task"":""T1"",""value"":""Yes"",""task_label"":""Is there a source visible in the center of the asteroid image (purple crosshairs)?  ""},{""task"":""T2"",""value"":""looks like the stars (no tail)"",""task_label"":""##### Note: Please always use the source closest to the center in each of the boxes. #####\n\nCompared to the reference stars (green crosshairs), the asteroid (purple crosshairs)....\n""},{""task"":""T3"",""value"":[""Is clean""],""task_label"":""Assess the quality of the asteroid image (purple crosshairs). The image.... **(Select all that apply)**""}]
-  ```
-
+```
+[{""task"":""init"",""value"":""No"",""task_label"":""Is the center region of the asteroid image (purple crosshairs)  crowded?""},{""task"":""T1"",""value"":""Yes"",""task_label"":""Is there a source visible in the center of the asteroid image (purple crosshairs)?  ""},{""task"":""T2"",""value"":""looks like the stars (no tail)"",""task_label"":""##### Note: Please always use the source closest to the center in each of the boxes. #####\n\nCompared to the reference stars (green crosshairs), the asteroid (purple crosshairs)....\n""},{""task"":""T3"",""value"":[""Is clean""],""task_label"":""Assess the quality of the asteroid image (purple crosshairs). The image.... **(Select all that apply)**""}]
+```
 
 **subject_data** {JSON} - Associated information about the subject classified. The first unlabeled integer is unique subject ID. Most of the rest of the JSON is the metadata for the subject, as uploaded by the project creator. The exception is the field 'retired' which is either 'null' or a JSON string describing the subject's retirement. Details of fields:
-
 - **id** (integer) - The unique Zooniverse-assigned subject ID
 - **retired** - provides details about the retirement of that subject. Content is nested within this.
   - **set_member_subject_id** Internal mapping between subjects -> and their sets (thus workflows). To allow subject re-use across projects we create a link table ‘set_member_subjects’ to map between workflows -> sets -> subjects
@@ -60,9 +58,8 @@ Example
 - **multiple columns** returning the metadata uploaded with the initial project
 
 Example
-  ```json
-  {""1289319"":{""retired"":null,""#type"":""MBA"",""#camera"":""SuprimeCam"",""\""#frameid"":""A00547895"",""#filename1"":""SUPA00547895.wcs-mba077087-00-sep02.gallery.png"",""#filename2"":""SUPA00547895.wcs-mba077087-00-sep02-inv.gallery.png"",""#asteroid_id"":""077087""}}
-  ```
+``` {""1289319"":{""retired"":null,""#type"":""MBA"",""#camera"":""SuprimeCam"",""\""#frameid"":""A00547895"",""#filename1"":""SUPA00547895.wcs-mba077087-00-sep02.gallery.png"",""#filename2"":""SUPA00547895.wcs-mba077087-00-sep02-inv.gallery.png"",""#asteroid_id"":""077087""}}
+```
 
 ## Details
 
@@ -76,7 +73,8 @@ Example
   - closed (true/false) - True if the user-drawn polygon was closed. False otherwise.
   - points (JSON formatted string) - A list of the points the user drew in (x,y) coordinate format, with each x and y value as real numbers. x and y values are pixel values relative to origin as upper left.
 - **points**
-  - x (float) - the horizontal value of the point as a real number relative to *** what? *** using the upper left corner as the origin
-  - y (float) - the vertical value of the point as a real number relative to *** what? *** using the upper left corner as the origin     
+  - x (float) - the horizontal value of the point as a real number using the upper left corner as the origin
+  - y (float) - the vertical value of the point as a real number using the upper left corner as the origin     
 
 **Question tasks**
+...coming soon!
