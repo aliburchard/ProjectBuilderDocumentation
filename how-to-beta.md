@@ -10,10 +10,10 @@ To make the most of this review, you want your project to be as near to final as
 
 ## Beta Data: Preparing a beta dataset
 Beta testing is an opportunity to ensure that your project can yield _useful_ data that makes sense, as well as an opportunity to assess how many classifications you need to confidently retire an image. To get the most out of your beta test, we recommend the following:
-1. Select 50-100 _randomly sampled images_ from your overall dataset. It is important that these be randomly sampled so that you can assess overall accuracy.
-2. Link _only_ this subject set to your workflow(s) so that classifiers only classify this specific subject set.
-3. Set retirement limits _high_ - 20 or higher. You want images to be "overclassified" - to have more classifications than they really need.
-4. After running beta, download your **aggregated data** from the Data Exports page and review it.  
+1. Select 50-100 _randomly sampled images_ from your overall dataset. It is important that these be randomly sampled so that you can assess overall accuracy.  
+2. Link _only_ this subject set to your workflow(s) so that classifiers only classify this specific subject set.  
+3. Set retirement limits _high_ - 20 or higher. You want images to be "overclassified" - to have more classifications than they really need.  
+4. After running beta, download your **aggregated data** from the Data Exports page and review it.   
 
 ## Data Validation (not really ready yet)
 We are still developing tools to make creating and comparing gold standard data easier, but you _can_ also contribute gold standard classifications during beta testing. Any project owner, collaborator, or expert should see a gear icon next to the "Next" button. You can use this gear icon to identify your classification as "gold standard."
