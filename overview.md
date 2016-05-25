@@ -11,4 +11,4 @@
 - [ ] Why worries about data theft are bunk
 - [ ] Step-by-step for admin-only tasks (tutorial, camera trap, field guide...)
 - [ ] Step-by-step for actual building with links to the relevant sections
-- [ ] Quick guide!
+- [x] Quick guide!
