@@ -11,6 +11,6 @@ We currently have various documentation for project builders here:
 1. document what still needs documenting (help much appreciated!)
 2. figure out how to more effectively parse/organize the existing tutorial
 
- 
+So if you want to use these docs to build a project and help out by identifying places that need more documentation, that would be great! 
 
 
